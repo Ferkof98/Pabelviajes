@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -29,7 +28,7 @@
     </script>
     <style>
         .bg-hero {
-            background-image: linear-gradient(rgba(17, 17, 17, 0.5), rgba(17, 17, 17, 0.7)), url('https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&fit=crop&q=80&w=2500');
+            background-image: linear-gradient(rgba(17, 17, 17, 0.5), rgba(17, 17, 17, 0.7)), url('https://images.unsplash.com/photo-1518182170546-0766de6b6aad?auto=format&fit=crop&q=80&w=2500');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -48,270 +47,191 @@
             outline: none;
             border-bottom: 2px solid #C5A059;
         }
-        .input-luxe::placeholder {
-            color: #9CA3AF;
-            font-weight: 300;
-        }
         .fade-in {
             animation: fadeIn 0.4s ease-in-out;
         }
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(-5px); }
+            from { opacity: 0; transform: translateY(5px); }
             to { opacity: 1; transform: translateY(0); }
         }
     </style>
 </head>
 <body class="bg-luxe-bg text-luxe-dark font-sans antialiased selection:bg-luxe-gold selection:text-white">
 
-    <nav class="bg-luxe-black text-white py-4 px-6 flex justify-between items-center z-50 relative tracking-wide">
+    <nav class="bg-luxe-black text-white py-4 px-6 flex justify-between items-center z-50 relative">
         <div class="hidden md:flex items-center space-x-2 text-xs uppercase tracking-widest text-luxe-gold">
-            <i class="fa-solid fa-gem"></i> <span>Ofertas Exclusivas</span>
+            <i class="fa-solid fa-gem"></i> <span>Diseño Exclusivo para Paulina</span>
         </div>
         <div class="flex items-center space-x-6 ml-auto">
             <a href="tel:8454806140" class="text-sm font-medium hover:text-luxe-gold transition duration-300">845-480-6140</a>
         </div>
     </nav>
 
-    <header class="bg-hero text-white h-[80vh] flex flex-col justify-center items-center px-4 text-center relative">
+    <header class="bg-hero text-white h-[75vh] flex flex-col justify-center items-center px-4 text-center relative">
         <p class="uppercase tracking-[0.3em] text-luxe-gold text-sm md:text-base mb-6 font-medium">Experiencias a Medida</p>
         <h1 class="font-serif text-5xl md:text-7xl lg:text-8xl mb-4 leading-tight">
             Viaja Más <br><span class="italic text-luxe-gold">Fácil</span>
         </h1>
-        <p class="font-serif text-2xl md:text-3xl text-gray-200 mt-4 mb-8">Y con los mejores precios.</p>
-        <p class="text-sm md:text-base font-light tracking-widest uppercase border-b border-luxe-gold pb-1">Te cotizo los mejores vuelos</p>
+        <p class="font-serif text-2xl md:text-3xl text-gray-200 mt-4 mb-8">Cotizaciones personalizadas al mejor precio.</p>
     </header>
 
-    <main class="max-w-5xl mx-auto px-4 relative z-10 -mt-24 mb-24">
-        <div class="bg-white p-8 md:p-16 shadow-2xl rounded-sm">
+    <main class="max-w-5xl mx-auto px-4 relative z-10 -mt-20 mb-24">
+        <div class="bg-white p-8 md:p-16 shadow-2xl rounded-sm border border-gray-100">
             
             <div class="text-center mb-12">
-                <h2 class="font-serif text-3xl md:text-4xl text-luxe-black mb-4">Diseña tu Itinerario</h2>
+                <h2 class="font-serif text-3xl md:text-4xl text-luxe-black mb-4">Solicitud de Itinerario</h2>
                 <div class="w-16 h-0.5 bg-luxe-gold mx-auto"></div>
             </div>
-
-            <div class="bg-luxe-black text-white p-6 mb-12 flex flex-col md:flex-row items-center justify-between border-l-2 border-luxe-gold">
-                <div class="text-center md:text-left mb-4 md:mb-0">
-                    <h4 class="font-serif text-xl md:text-2xl mb-1">Tours Exclusivos en EE. UU.</h4>
-                    <p class="text-sm text-gray-400 font-light">Indícalo en el formulario inferior para recibir propuestas.</p>
-                </div>
-                <i class="fa-solid fa-map-location-dot text-3xl text-luxe-gold opacity-80"></i>
-            </div>
             
-            <form id="flightForm" action="https://formsubmit.co/pabela100@hotmail.com" method="POST" class="space-y-10">
+            <form id="flightForm" action="https://formsubmit.co/pabela100@hotmail.com" method="POST" class="space-y-12">
                 <input type="hidden" name="_subject" value="Nueva Cotización Bespoke Travel">
-                <input type="hidden" name="_captcha" value="false">
                 <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_captcha" value="false">
 
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
                     <div>
-                        <label class="block text-xs uppercase tracking-widest text-gray-500 mb-2">Nombre Completo</label>
-                        <input type="text" name="Nombre" required class="input-luxe" placeholder="Tu nombre">
+                        <label class="block text-[10px] uppercase tracking-[0.2em] text-gray-400 mb-2">Nombre Completo</label>
+                        <input type="text" name="Titular" required class="input-luxe" placeholder="Ej: Fernando Rosero">
                     </div>
                     <div>
-                        <label class="block text-xs uppercase tracking-widest text-gray-500 mb-2">Correo Electrónico</label>
-                        <input type="email" name="Email" required class="input-luxe" placeholder="email@ejemplo.com">
+                        <label class="block text-[10px] uppercase tracking-[0.2em] text-gray-400 mb-2">Correo Electrónico</label>
+                        <input type="email" name="Email" required class="input-luxe" placeholder="tu@correo.com">
                     </div>
                     <div>
-                        <label class="block text-xs uppercase tracking-widest text-gray-500 mb-2">Teléfono</label>
-                        <input type="tel" name="Teléfono" class="input-luxe" placeholder="845-480-6140">
+                        <label class="block text-[10px] uppercase tracking-[0.2em] text-gray-400 mb-2">WhatsApp</label>
+                        <input type="tel" name="Whatsapp" class="input-luxe" placeholder="845-480-6140">
                     </div>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
                     <div>
-                        <label class="block text-xs uppercase tracking-widest text-gray-500 mb-2">Desde</label>
-                        <input type="text" name="Origen" required class="input-luxe" placeholder="Ciudad de origen">
+                        <label class="block text-[10px] uppercase tracking-[0.2em] text-gray-400 mb-2">Origen</label>
+                        <input type="text" name="Origen" required class="input-luxe" placeholder="Ciudad o Aeropuerto">
                     </div>
                     <div>
-                        <label class="block text-xs uppercase tracking-widest text-gray-500 mb-2">Hacia</label>
-                        <input type="text" name="Destino" required class="input-luxe" placeholder="Ciudad de destino">
+                        <label class="block text-[10px] uppercase tracking-[0.2em] text-gray-400 mb-2">Destino</label>
+                        <input type="text" name="Destino" required class="input-luxe" placeholder="¿A dónde vamos?">
                     </div>
                     <div>
-                        <label class="block text-xs uppercase tracking-widest text-gray-500 mb-2">Ida</label>
-                        <input type="date" name="Fecha_Ida" required class="input-luxe text-gray-700">
+                        <label class="block text-[10px] uppercase tracking-[0.2em] text-gray-400 mb-2">Fecha Ida</label>
+                        <input type="date" name="Salida" required class="input-luxe text-gray-600">
                     </div>
                     <div>
-                        <label class="block text-xs uppercase tracking-widest text-gray-500 mb-2">Vuelta (Opcional)</label>
-                        <input type="date" name="Fecha_Vuelta" class="input-luxe text-gray-700">
+                        <label class="block text-[10px] uppercase tracking-[0.2em] text-gray-400 mb-2">Fecha Vuelta (Opcional)</label>
+                        <input type="date" name="Regreso" class="input-luxe text-gray-600">
                     </div>
                 </div>
 
-                <div class="py-2">
-                    <label class="flex items-start cursor-pointer group">
-                        <div class="relative flex items-center justify-center w-5 h-5 mt-0.5 border border-gray-400 rounded-sm group-hover:border-luxe-gold transition">
-                            <input type="checkbox" name="Interes_Tours_USA" value="Sí" class="peer appearance-none w-full h-full cursor-pointer">
-                            <i class="fa-solid fa-check absolute text-luxe-gold text-xs opacity-0 peer-checked:opacity-100 transition"></i>
-                        </div>
-                        <div class="ml-4">
-                            <span class="block font-medium text-luxe-black">Deseo incluir información sobre Tours dentro de EE. UU.</span>
-                            <span class="block text-sm text-gray-500 mt-1 font-light">Asesoría personalizada por Paulina.</span>
-                        </div>
-                    </label>
-                </div>
-
-                <!-- PASAJEROS -->
-                <div class="grid grid-cols-3 gap-8 items-end border-t border-gray-100 pt-8">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 border-t border-gray-100 pt-10">
                     <div>
-                        <label class="block text-xs uppercase tracking-widest text-gray-500 mb-2">Adultos</label>
-                        <select name="Cantidad_Adultos" id="adultos" class="input-luxe text-center cursor-pointer appearance-none bg-transparent">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6+</option>
+                        <label class="block text-[10px] uppercase tracking-widest text-gray-500 mb-2">Adultos</label>
+                        <select name="Pax_Adultos" id="adultos" class="input-luxe cursor-pointer bg-transparent">
+                            <option value="1">1</option><option value="2">2</option><option value="3">3</option>
+                            <option value="4">4</option><option value="5">5+</option>
                         </select>
                     </div>
                     <div>
-                        <label class="block text-xs uppercase tracking-widest text-gray-500 mb-2">Niños (2-11 años)</label>
-                        <select name="Cantidad_Niños" id="ninos" class="input-luxe text-center cursor-pointer appearance-none bg-transparent">
-                            <option value="0">0</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4+</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label class="block text-xs uppercase tracking-widest text-gray-500 mb-2">Bebés (0-2 años)</label>
-                        <select name="Cantidad_Bebés" id="bebes" class="input-luxe text-center cursor-pointer appearance-none bg-transparent">
-                            <option value="0">0</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
+                        <label class="block text-[10px] uppercase tracking-widest text-luxe-gold mb-2 font-bold">Mayores (65+)</label>
+                        <select name="Pax_Seniors" id="seniors" class="input-luxe cursor-pointer bg-transparent font-bold">
+                            <option value="0">0</option><option value="1">1</option><option value="2">2</option>
                             <option value="3">3+</option>
                         </select>
                     </div>
-                </div>
-
-                <!-- CONTENEDOR DINÁMICO DE FECHAS DE NACIMIENTO -->
-                <div class="bg-gray-50/50 p-6 rounded-sm border border-gray-100 mt-4">
-                    <h5 class="text-xs uppercase tracking-widest text-luxe-dark mb-6 font-semibold flex items-center">
-                        <i class="fa-regular fa-calendar-days text-luxe-gold mr-2"></i> Fechas de Nacimiento Requeridas
-                    </h5>
-                    <!-- Aquí aparecen los inputs de fechas generados por JS -->
-                    <div id="contenedorFechas" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div>
+                        <label class="block text-[10px] uppercase tracking-widest text-gray-500 mb-2">Niños (2-11)</label>
+                        <select name="Pax_Ninos" id="ninos" class="input-luxe cursor-pointer bg-transparent">
+                            <option value="0">0</option><option value="1">1</option><option value="2">2</option>
+                            <option value="3">3</option><option value="4">4+</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-[10px] uppercase tracking-widest text-gray-500 mb-2">Bebés (0-2)</label>
+                        <select name="Pax_Bebes" id="bebes" class="input-luxe cursor-pointer bg-transparent">
+                            <option value="0">0</option><option value="1">1</option><option value="2">2</option>
+                        </select>
                     </div>
                 </div>
 
-                <div class="mt-8 pt-4">
-                    <button type="submit" class="w-full bg-luxe-black hover:bg-luxe-gold text-white uppercase tracking-widest text-sm py-4 px-4 transition duration-500 flex justify-center items-center">
-                        Solicitar Cotización
+                <div id="seccionFechas" class="bg-gray-50 p-6 md:p-8 rounded-sm border border-gray-100 mt-4">
+                    <h4 class="font-serif text-lg mb-6 flex items-center text-luxe-black">
+                        <i class="fa-solid fa-calendar-days text-luxe-gold mr-3"></i> 
+                        Fechas de Nacimiento (Requerido para cotización real)
+                    </h4>
+                    <div id="contenedorFechas" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        </div>
+                </div>
+
+                <div class="space-y-6 pt-4">
+                    <label class="flex items-center cursor-pointer group">
+                        <input type="checkbox" required class="w-5 h-5 border-gray-300 rounded text-luxe-gold focus:ring-luxe-gold">
+                        <span class="ml-3 text-sm text-gray-600 font-light italic">Confirmo que las fechas de nacimiento ingresadas coinciden con los documentos de identidad.</span>
+                    </label>
+                    
+                    <button type="submit" class="w-full bg-luxe-black hover:bg-luxe-gold text-white uppercase tracking-[0.3em] text-xs py-5 transition duration-700 shadow-xl">
+                        Solicitar Cotización a Paulina
                     </button>
                 </div>
             </form>
         </div>
     </main>
 
-    <section class="max-w-7xl mx-auto px-4 py-16 mb-16">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div>
-                <h3 class="uppercase tracking-[0.2em] text-luxe-gold text-sm mb-4">El Servicio</h3>
-                <h2 class="font-serif text-4xl md:text-5xl text-luxe-black mb-8 leading-tight">Ahorra tiempo, <br>viaja mejor.</h2>
-                <p class="text-gray-600 font-light leading-relaxed mb-10">
-                    Nos encargamos de cada detalle. Desde boletos aéreos internacionales hasta promociones que no se publican en internet. Recibe atención inmediata por llamada o mensaje.
-                </p>
-                <div class="space-y-6">
-                    <div class="flex items-center">
-                        <span class="w-12 h-12 border border-luxe-gold rounded-full flex items-center justify-center text-luxe-gold mr-4">
-                            <i class="fa-solid fa-headset"></i>
-                        </span>
-                        <span class="font-serif text-xl">Atención Personalizada</span>
-                    </div>
-                    <div class="flex items-center">
-                        <span class="w-12 h-12 border border-luxe-gold rounded-full flex items-center justify-center text-luxe-gold mr-4">
-                            <i class="fa-solid fa-tags"></i>
-                        </span>
-                        <span class="font-serif text-xl">Tarifas Preferenciales</span>
-                    </div>
-                </div>
-            </div>
-            <div class="relative">
-                <img src="https://images.unsplash.com/photo-1542314831-c6a4d14241cc?auto=format&fit=crop&q=80&w=800" alt="Luxury Travel" class="w-full h-auto object-cover rounded-sm shadow-xl grayscale hover:grayscale-0 transition duration-1000">
-                <div class="absolute -bottom-8 -left-8 bg-white p-6 shadow-lg border-l-2 border-luxe-gold hidden md:block">
-                    <p class="font-serif text-2xl italic">"Yo busco por ti."</p>
-                </div>
-            </div>
+    <section class="max-w-7xl mx-auto px-4 py-24">
+        <div class="text-center mb-16">
+            <h3 class="uppercase tracking-[0.3em] text-luxe-gold text-sm mb-4 font-medium">Bespoke Tours</h3>
+            <h2 class="font-serif text-4xl md:text-5xl text-luxe-black">Explora por Región</h2>
         </div>
-    </section>
 
-    <!-- FOTOS ACTUALIZADAS Y FUNCIONALES -->
-    <section class="bg-luxe-black py-24 px-4">
-        <div class="max-w-7xl mx-auto">
-            <div class="text-center mb-16">
-                <h3 class="uppercase tracking-[0.2em] text-luxe-gold text-sm mb-4">Explora</h3>
-                <h2 class="font-serif text-4xl md:text-5xl text-white">Destinos Globales</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="group h-[380px] relative overflow-hidden group">
+                <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-1000 scale-100 group-hover:scale-105">
+                <div class="absolute inset-0 bg-black/40 flex items-end p-8">
+                    <div>
+                        <h4 class="font-serif text-2xl text-white tracking-widest mb-1">Américas</h4>
+                        <p class="text-xs text-gray-200 uppercase tracking-widest font-light">USA / Canadá / México</p>
+                    </div>
+                </div>
             </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-                <div class="group relative overflow-hidden h-[400px] cursor-pointer">
-                    <img src="https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?auto=format&fit=crop&q=80&w=800" alt="Américas" class="w-full h-full object-cover opacity-70 group-hover:opacity-100 group-hover:scale-105 transition duration-1000">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-8">
-                        <h4 class="font-serif text-2xl text-white tracking-wide">Américas</h4>
+            <div class="group h-[380px] relative overflow-hidden group">
+                <img src="https://images.unsplash.com/photo-1526392060635-9d6019884377?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-1000 scale-100 group-hover:scale-105">
+                <div class="absolute inset-0 bg-black/40 flex items-end p-8">
+                    <div>
+                        <h4 class="font-serif text-2xl text-white tracking-widest mb-1">Latinoamérica</h4>
+                        <p class="text-xs text-gray-200 uppercase tracking-widest font-light">Tours Exclusivos</p>
                     </div>
                 </div>
-                <div class="group relative overflow-hidden h-[400px] cursor-pointer">
-                    <!-- Imagen corregida para Latinoamérica (Machu Picchu, muy estable) -->
-                    <img src="https://images.unsplash.com/photo-1518638150340-f706e86654de?auto=format&fit=crop&q=80&w=800" alt="Latinoamérica" class="w-full h-full object-cover opacity-70 group-hover:opacity-100 group-hover:scale-105 transition duration-1000">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-8">
-                        <h4 class="font-serif text-2xl text-white tracking-wide">Latinoamérica</h4>
+            </div>
+            <div class="group h-[380px] relative overflow-hidden group">
+                <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-1000 scale-100 group-hover:scale-105">
+                <div class="absolute inset-0 bg-black/40 flex items-end p-8">
+                    <div>
+                        <h4 class="font-serif text-2xl text-white tracking-widest mb-1">Europa</h4>
+                        <p class="text-xs text-gray-200 uppercase tracking-widest font-light">Cruceros Exclusivos</p>
                     </div>
                 </div>
-                <div class="group relative overflow-hidden h-[400px] cursor-pointer">
-                    <img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?auto=format&fit=crop&q=80&w=800" alt="Europa" class="w-full h-full object-cover opacity-70 group-hover:opacity-100 group-hover:scale-105 transition duration-1000">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-8">
-                        <h4 class="font-serif text-2xl text-white tracking-wide">Europa</h4>
-                    </div>
-                </div>
-                <div class="group relative overflow-hidden h-[400px] cursor-pointer">
-                    <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&q=80&w=800" alt="Oriente Medio" class="w-full h-full object-cover opacity-70 group-hover:opacity-100 group-hover:scale-105 transition duration-1000">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-8">
-                        <h4 class="font-serif text-2xl text-white tracking-wide">Oriente Medio</h4>
+            </div>
+            <div class="group h-[380px] relative overflow-hidden group">
+                <img src="https://images.unsplash.com/photo-1489440543227-a6d3d9368952?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-1000 scale-100 group-hover:scale-105">
+                <div class="absolute inset-0 bg-black/40 flex items-end p-8">
+                    <div>
+                        <h4 class="font-serif text-2xl text-white tracking-widest mb-1">Asia</h4>
+                        <p class="text-xs text-gray-200 uppercase tracking-widest font-light">Oriente Medio & Pacífico</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="py-24 px-4 text-center bg-white border-b border-gray-100">
-        <h2 class="font-serif text-3xl md:text-5xl text-luxe-black mb-8">Comienza tu historia hoy.</h2>
-        <a href="tel:8454806140" class="inline-block text-4xl md:text-6xl font-light text-luxe-gold hover:text-luxe-black transition duration-500 tracking-wider">
-            845.480.6140
-        </a>
-    </section>
-
-    <footer class="bg-luxe-dark text-white pt-16 pb-8 px-4">
-        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 mb-12 text-center md:text-left">
-            <div>
-                <h5 class="text-luxe-gold text-xs uppercase tracking-widest mb-4">Seguridad</h5>
-                <p class="text-gray-400 text-sm font-light">Confianza y respaldo</p>
-            </div>
-            <div>
-                <h5 class="text-luxe-gold text-xs uppercase tracking-widest mb-4">Experiencia</h5>
-                <p class="text-gray-400 text-sm font-light">Compromiso total</p>
-            </div>
-            <div>
-                <h5 class="text-luxe-gold text-xs uppercase tracking-widest mb-4">Tarifas</h5>
-                <p class="text-gray-400 text-sm font-light">Los mejores precios</p>
-            </div>
-            <div>
-                <h5 class="text-luxe-gold text-xs uppercase tracking-widest mb-4">Garantía</h5>
-                <p class="text-gray-400 text-sm font-light">Tu viaje, mi compromiso</p>
-            </div>
-        </div>
-        <div class="text-center border-t border-gray-800 pt-8 text-xs text-gray-500 uppercase tracking-widest">
-            &copy; <script>document.write(new Date().getFullYear())</script> Viaja Más Fácil. Diseño Exclusivo.
-        </div>
+    <footer class="bg-luxe-dark text-white py-10 px-4 text-center">
+        <p class="text-sm font-light text-gray-400">© 2026 Viaja Más Fácil. Diseño Vanguardista.</p>
     </footer>
 
-    <!-- BOTÓN FLOTANTE DE WHATSAPP -->
-    <a href="https://wa.me/18454806140?text=Hola,%20Paulina.%20Me%20gustaría%20solicitar%20una%20cotización%20de%20viaje." target="_blank" class="fixed bottom-6 right-6 bg-luxe-gold hover:bg-luxe-dark text-white w-14 h-14 rounded-full shadow-2xl transition duration-300 z-50 flex items-center justify-center text-3xl">
+    <a href="https://wa.me/18454806140?text=Hola,%20Paulina.%20Me%20gustaría%20solicitar%20una%20cotización." class="fixed bottom-8 right-8 bg-luxe-gold text-white w-14 h-14 rounded-full shadow-2xl flex items-center justify-center text-2xl hover:scale-110 transition z-[100]">
         <i class="fa-brands fa-whatsapp"></i>
     </a>
 
-    <!-- SCRIPT DE FECHAS (Escuchador de eventos robusto) -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            const selectores = ['adultos', 'ninos', 'bebes'];
+            const selectores = ['adultos', 'seniors', 'ninos', 'bebes'];
             
             // Asignar el evento a cada selector
             selectores.forEach(id => {
@@ -327,6 +247,7 @@
 
         function actualizarFechas() {
             const numAdultos = parseInt(document.getElementById('adultos').value) || 1;
+            const numSeniors = parseInt(document.getElementById('seniors').value) || 0;
             const numNinos = parseInt(document.getElementById('ninos').value) || 0;
             const numBebes = parseInt(document.getElementById('bebes').value) || 0;
             
@@ -334,8 +255,24 @@
             contenedor.innerHTML = ''; // Limpiamos cajones previos
 
             // Función para inyectar HTML de forma limpia
-            const generarCampos = (tipoLabel, tipoName, cantidad) => {
+            const generarCampos = (tipoLabel, tipoName, cantidad, colorLabel = "text-gray-400") => {
                 for (let i = 1; i <= cantidad; i++) {
-                    contenedor.innerHTML += `
-                        <div class="fade-in bg-white p-4 border border-gray-100 shadow-sm rounded-sm">
-                            <label class="block text-[10px] uppercase tra
+                    const dynamicDiv = document.createElement('div');
+                    dynamicDiv.className = 'fade-in bg-white p-4 border border-gray-100 shadow-sm rounded-sm';
+                    dynamicDiv.innerHTML = `
+                        <label class="block text-[10px] uppercase tracking-widest text-luxe-gold mb-1 font-bold">${tipoLabel} ${i}</label>
+                        <input type="date" name="Fecha_Nac_${tipoName}_${i}" required class="input-luxe text-gray-700 text-center !py-1 !text-sm">
+                    `;
+                    contenedor.appendChild(dynamicDiv);
+                }
+            };
+
+            // Generamos los campos en orden: Adultos, Seniors, Niños, Bebés
+            generarCampos('Adulto', 'Adulto', numAdultos);
+            generarCampos('Adulto Mayor', 'Senior', numSeniors);
+            generarCampos('Niño (2-11)', 'Nino', numNinos);
+            generarCampos('Bebé (0-2)', 'Bebe', numBebes);
+        }
+    </script>
+</body>
+</html>
