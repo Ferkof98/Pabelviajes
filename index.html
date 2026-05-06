@@ -4,369 +4,338 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pabelviajes - Tu Agencia de Confianza</title>
+    <title>Viaja Más Fácil | Bespoke Travel</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { 
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        'luxe-black': '#111111',
+                        'luxe-dark': '#222222',
+                        'luxe-gold': '#C5A059',
+                        'luxe-gold-hover': '#A88544',
+                        'luxe-bg': '#FAFAFA',
+                    }
+                }
+            }
+        }
+    </script>
     <style>
-        /* Paleta de colores sobria: Azul oscuro (#2c4c66), dorado (#c5a059), fondo claro (#f9f9f9) */
-        :root {
-            --primary: #2c4c66;
-            --accent: #c5a059;
-            --bg-color: #f9f9f9;
-            --text-dark: #333333;
-            --white: #ffffff;
+        .bg-hero {
+            background-image: linear-gradient(rgba(17, 17, 17, 0.5), rgba(17, 17, 17, 0.7)), url('https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&fit=crop&q=80&w=2500');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
         }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: var(--bg-color);
-            color: var(--text-dark);
-        }
-
-        /* Encabezado */
-        header {
-            background-color: var(--primary);
-            color: var(--white);
-            padding: 20px;
-            text-align: center;
-            position: relative;
-        }
-        
-        header h1 {
-            margin: 0;
-            font-size: 28px;
-            letter-spacing: 2px;
-        }
-
-        .btn-lang {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            background: transparent;
-            color: var(--accent);
-            border: 1px solid var(--accent);
-            padding: 5px 10px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 12px;
-        }
-
-        .container {
-            max-width: 600px;
-            margin: 20px auto;
-            padding: 0 20px;
-        }
-
-        /* Secciones principales */
-        .section-card {
-            background: var(--white);
-            padding: 20px;
-            border-radius: 10px;
-            margin-bottom: 20px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-            border-top: 4px solid var(--primary);
-        }
-
-        .section-card h2 {
-            color: var(--primary);
-            margin-top: 0;
-            font-size: 20px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .opt-btn {
-            background-color: var(--primary);
-            color: var(--white);
-            border: none;
-            padding: 10px 15px;
-            border-radius: 5px;
-            cursor: pointer;
+        .input-luxe {
             width: 100%;
-            font-size: 14px;
-            margin-top: 10px;
-        }
-
-        .hidden { display: none; }
-
-        /* Formulario y Rueditas */
-        form {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-
-        label {
-            font-size: 12px;
-            font-weight: bold;
-            color: var(--primary);
-            text-transform: uppercase;
-        }
-
-        input[type="text"], input[type="email"], input[type="date"], select {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 16px;
-            box-sizing: border-box;
-            background-color: var(--white);
-        }
-
-        /* Estilo de Rueditas (Selects nativos) */
-        .passengers-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 10px;
-            background-color: #eef2f5;
-            padding: 15px;
-            border-radius: 8px;
-        }
-
-        .passengers-grid select {
-            text-align: center;
-            appearance: none; /* Quita la flecha por defecto */
-            background-image: url('data:image/svg+xml;utf8,<svg fill="%232c4c66" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
-            background-repeat: no-repeat;
-            background-position-x: 90%;
-            background-position-y: 50%;
-            border: 2px solid var(--primary);
-            font-weight: bold;
-            color: var(--primary);
-        }
-
-        #dob-container {
-            margin-top: 15px;
-            border-top: 1px solid #ccc;
-            padding-top: 15px;
-        }
-
-        .dob-field {
-            margin-bottom: 10px;
-        }
-
-        .submit-btn {
-            background-color: var(--text-dark);
-            color: var(--white);
+            background-color: transparent;
             border: none;
-            padding: 15px;
-            font-size: 16px;
-            font-weight: bold;
-            letter-spacing: 1px;
-            border-radius: 5px;
-            cursor: pointer;
-            margin-top: 10px;
+            border-bottom: 1px solid #D1D5DB;
+            padding: 0.75rem 0;
+            font-size: 1rem;
+            color: #111111;
+            transition: all 0.3s ease;
         }
-
-        .submit-btn:hover { background-color: #000; }
-
-        .form-note {
-            font-size: 11px;
-            text-align: center;
-            color: #666;
-            margin-top: 5px;
+        .input-luxe:focus {
+            outline: none;
+            border-bottom: 2px solid #C5A059;
         }
-
-        /* Recuadro al final */
-        .suggestion-box {
-            background-color: var(--primary);
-            color: var(--white);
-            padding: 20px;
-            border-radius: 10px;
-            text-align: center;
-            margin-bottom: 80px; /* Espacio para el botón de whatsapp */
+        .input-luxe::placeholder {
+            color: #9CA3AF;
+            font-weight: 300;
         }
-        
-        .suggestion-box h3 { color: var(--accent); margin-top: 0; }
-
-        /* Botón Flotante WhatsApp */
-        .whatsapp-float {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background-color: #25d366;
-            color: white;
-            border-radius: 50px;
-            padding: 12px 20px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            text-decoration: none;
-            font-weight: bold;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-            z-index: 1000;
+        .fade-in {
+            animation: fadeIn 0.4s ease-in-out;
         }
-        .whatsapp-float svg { width: 24px; height: 24px; fill: white; }
-
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-5px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
     </style>
 </head>
-<body>
+<body class="bg-luxe-bg text-luxe-dark font-sans antialiased selection:bg-luxe-gold selection:text-white">
 
-    <header>
-        <h1 class="lang-es">PABELVIAJES</h1>
-        <h1 class="lang-en hidden">PABELVIAJES</h1>
-        <button class="btn-lang" onclick="toggleLanguage()" id="lang-btn">EN</button>
+    <nav class="bg-luxe-black text-white py-4 px-6 flex justify-between items-center z-50 relative tracking-wide">
+        <div class="hidden md:flex items-center space-x-2 text-xs uppercase tracking-widest text-luxe-gold">
+            <i class="fa-solid fa-gem"></i> <span>Ofertas Exclusivas</span>
+        </div>
+        <div class="flex items-center space-x-6 ml-auto">
+            <a href="tel:8454806140" class="text-sm font-medium hover:text-luxe-gold transition duration-300">845-480-6140</a>
+        </div>
+    </nav>
+
+    <header class="bg-hero text-white h-[80vh] flex flex-col justify-center items-center px-4 text-center relative">
+        <p class="uppercase tracking-[0.3em] text-luxe-gold text-sm md:text-base mb-6 font-medium">Experiencias a Medida</p>
+        <h1 class="font-serif text-5xl md:text-7xl lg:text-8xl mb-4 leading-tight">
+            Viaja Más <br><span class="italic text-luxe-gold">Fácil</span>
+        </h1>
+        <p class="font-serif text-2xl md:text-3xl text-gray-200 mt-4 mb-8">Y con los mejores precios.</p>
+        <p class="text-sm md:text-base font-light tracking-widest uppercase border-b border-luxe-gold pb-1">Te cotizo los mejores vuelos</p>
     </header>
 
-    <div class="container">
-        
-        <!-- Vuelos Internacionales -->
-        <div class="section-card">
-            <h2 class="lang-es">✈️ Vuelos Internacionales</h2>
-            <h2 class="lang-en hidden">✈️ International Flights</h2>
-            <p class="lang-es">Las mejores tarifas para cualquier parte del mundo. Atención 24/7.</p>
-            <p class="lang-en hidden">The best rates to anywhere in the world. 24/7 support.</p>
-        </div>
-
-        <!-- Tours Mundiales con botón opcional -->
-        <div class="section-card">
-            <h2 class="lang-es">🌍 Tours por el Mundo</h2>
-            <h2 class="lang-en hidden">🌍 World Tours</h2>
-            <p class="lang-es">Europa, Asia y Latinoamérica con guías expertos.</p>
-            <p class="lang-en hidden">Europe, Asia, and Latin America with expert guides.</p>
+    <main class="max-w-5xl mx-auto px-4 relative z-10 -mt-24 mb-24">
+        <div class="bg-white p-8 md:p-16 shadow-2xl rounded-sm">
             
-            <button class="opt-btn lang-es" onclick="toggleTours()">Ver Opciones de Tours (Opcional)</button>
-            <button class="opt-btn lang-en hidden" onclick="toggleTours()">View Tour Options (Optional)</button>
-            
-            <div id="tours-info" class="hidden" style="margin-top:15px; border-left: 3px solid var(--accent); padding-left: 10px;">
-                <p class="lang-es">✓ Cruceros por el Mediterráneo<br>✓ Safari en África<br>✓ Circuitos por Japón</p>
-                <p class="lang-en hidden">✓ Mediterranean Cruises<br>✓ Africa Safari<br>✓ Japan Highlights</p>
+            <div class="text-center mb-12">
+                <h2 class="font-serif text-3xl md:text-4xl text-luxe-black mb-4">Diseña tu Itinerario</h2>
+                <div class="w-16 h-0.5 bg-luxe-gold mx-auto"></div>
             </div>
-        </div>
 
-        <!-- FORMULARIO DE COTIZACIÓN -->
-        <div class="section-card">
-            <h2 class="lang-es">📝 Cotiza tu Viaje</h2>
-            <h2 class="lang-en hidden">📝 Get a Quote</h2>
-            
-            <!-- Aquí ya está tu correo configurado -->
-            <form action="https://formsubmit.co/pabela100@hotmail.com" method="POST">
-                
-                <!-- Configuración oculta para FormSubmit -->
-                <input type="hidden" name="_subject" value="Nueva Cotización - Pabelviajes">
-                <input type="hidden" name="_captcha" value="false">
-                
-                <div>
-                    <label class="lang-es">Correo Electrónico</label>
-                    <label class="lang-en hidden">Email Address</label>
-                    <input type="email" name="email" required placeholder="ejemplo@correo.com">
+            <div class="bg-luxe-black text-white p-6 mb-12 flex flex-col md:flex-row items-center justify-between border-l-2 border-luxe-gold">
+                <div class="text-center md:text-left mb-4 md:mb-0">
+                    <h4 class="font-serif text-xl md:text-2xl mb-1">Tours Exclusivos en EE. UU.</h4>
+                    <p class="text-sm text-gray-400 font-light">Indícalo en el formulario inferior para recibir propuestas.</p>
                 </div>
+                <i class="fa-solid fa-map-location-dot text-3xl text-luxe-gold opacity-80"></i>
+            </div>
+            
+            <form id="flightForm" action="https://formsubmit.co/pabela100@hotmail.com" method="POST" class="space-y-10">
+                <input type="hidden" name="_subject" value="Nueva Cotización Bespoke Travel">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="table">
 
-                <!-- Selección de Pasajeros (Estilo Rueditas iOS) -->
-                <div>
-                    <label class="lang-es">Pasajeros</label>
-                    <label class="lang-en hidden">Passengers</label>
-                    <div class="passengers-grid">
-                        <div>
-                            <label class="lang-es" style="font-size: 10px;">Adultos</label>
-                            <label class="lang-en hidden" style="font-size: 10px;">Adults</label>
-                            <select name="Adultos" id="adults" onchange="updateDOBFields()">
-                                <option value="1">1</option><option value="2">2</option><option value="3">3</option>
-                                <option value="4">4</option><option value="5">5</option><option value="6">6</option>
-                            </select>
-                        </div>
-                        <div>
-                            <label class="lang-es" style="font-size: 10px;">Niños</label>
-                            <label class="lang-en hidden" style="font-size: 10px;">Children</label>
-                            <select name="Niños" id="children" onchange="updateDOBFields()">
-                                <option value="0">0</option><option value="1">1</option><option value="2">2</option>
-                                <option value="3">3</option><option value="4">4</option>
-                            </select>
-                        </div>
-                        <div>
-                            <label class="lang-es" style="font-size: 10px;">Bebés</label>
-                            <label class="lang-en hidden" style="font-size: 10px;">Infants</label>
-                            <select name="Bebés" id="babies" onchange="updateDOBFields()">
-                                <option value="0">0</option><option value="1">1</option><option value="2">2</option>
-                            </select>
-                        </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div>
+                        <label class="block text-xs uppercase tracking-widest text-gray-500 mb-2">Nombre Completo</label>
+                        <input type="text" name="Nombre" required class="input-luxe" placeholder="Tu nombre">
+                    </div>
+                    <div>
+                        <label class="block text-xs uppercase tracking-widest text-gray-500 mb-2">Correo Electrónico</label>
+                        <input type="email" name="Email" required class="input-luxe" placeholder="email@ejemplo.com">
+                    </div>
+                    <div>
+                        <label class="block text-xs uppercase tracking-widest text-gray-500 mb-2">Teléfono</label>
+                        <input type="tel" name="Teléfono" class="input-luxe" placeholder="845-480-6140">
                     </div>
                 </div>
 
-                <!-- Contenedor dinámico de fechas de nacimiento -->
-                <div id="dob-container">
-                    <!-- Se llena automáticamente con JavaScript -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div>
+                        <label class="block text-xs uppercase tracking-widest text-gray-500 mb-2">Desde</label>
+                        <input type="text" name="Origen" required class="input-luxe" placeholder="Ciudad de origen">
+                    </div>
+                    <div>
+                        <label class="block text-xs uppercase tracking-widest text-gray-500 mb-2">Hacia</label>
+                        <input type="text" name="Destino" required class="input-luxe" placeholder="Ciudad de destino">
+                    </div>
+                    <div>
+                        <label class="block text-xs uppercase tracking-widest text-gray-500 mb-2">Ida</label>
+                        <input type="date" name="Fecha_Ida" required class="input-luxe text-gray-700">
+                    </div>
+                    <div>
+                        <label class="block text-xs uppercase tracking-widest text-gray-500 mb-2">Vuelta (Opcional)</label>
+                        <input type="date" name="Fecha_Vuelta" class="input-luxe text-gray-700">
+                    </div>
                 </div>
 
-                <button type="submit" class="submit-btn lang-es">SOLICITAR COTIZACIÓN</button>
-                <button type="submit" class="submit-btn lang-en hidden">REQUEST QUOTE</button>
-                <p class="form-note lang-es">Formulario configurado para enviar a tu email.</p>
-                <p class="form-note lang-en hidden">Form configured to send to your email.</p>
+                <div class="py-2">
+                    <label class="flex items-start cursor-pointer group">
+                        <div class="relative flex items-center justify-center w-5 h-5 mt-0.5 border border-gray-400 rounded-sm group-hover:border-luxe-gold transition">
+                            <input type="checkbox" name="Interes_Tours_USA" value="Sí" class="peer appearance-none w-full h-full cursor-pointer">
+                            <i class="fa-solid fa-check absolute text-luxe-gold text-xs opacity-0 peer-checked:opacity-100 transition"></i>
+                        </div>
+                        <div class="ml-4">
+                            <span class="block font-medium text-luxe-black">Deseo incluir información sobre Tours dentro de EE. UU.</span>
+                            <span class="block text-sm text-gray-500 mt-1 font-light">Asesoría personalizada por Paulina.</span>
+                        </div>
+                    </label>
+                </div>
+
+                <!-- PASAJEROS -->
+                <div class="grid grid-cols-3 gap-8 items-end border-t border-gray-100 pt-8">
+                    <div>
+                        <label class="block text-xs uppercase tracking-widest text-gray-500 mb-2">Adultos</label>
+                        <select name="Cantidad_Adultos" id="adultos" class="input-luxe text-center cursor-pointer appearance-none bg-transparent">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6+</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-xs uppercase tracking-widest text-gray-500 mb-2">Niños (2-11 años)</label>
+                        <select name="Cantidad_Niños" id="ninos" class="input-luxe text-center cursor-pointer appearance-none bg-transparent">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4+</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-xs uppercase tracking-widest text-gray-500 mb-2">Bebés (0-2 años)</label>
+                        <select name="Cantidad_Bebés" id="bebes" class="input-luxe text-center cursor-pointer appearance-none bg-transparent">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3+</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- CONTENEDOR DINÁMICO DE FECHAS DE NACIMIENTO -->
+                <div class="bg-gray-50/50 p-6 rounded-sm border border-gray-100 mt-4">
+                    <h5 class="text-xs uppercase tracking-widest text-luxe-dark mb-6 font-semibold flex items-center">
+                        <i class="fa-regular fa-calendar-days text-luxe-gold mr-2"></i> Fechas de Nacimiento Requeridas
+                    </h5>
+                    <!-- Aquí aparecen los inputs de fechas generados por JS -->
+                    <div id="contenedorFechas" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    </div>
+                </div>
+
+                <div class="mt-8 pt-4">
+                    <button type="submit" class="w-full bg-luxe-black hover:bg-luxe-gold text-white uppercase tracking-widest text-sm py-4 px-4 transition duration-500 flex justify-center items-center">
+                        Solicitar Cotización
+                    </button>
+                </div>
             </form>
         </div>
+    </main>
 
-        <!-- Sugerencia al final -->
-        <div class="suggestion-box">
-            <h3 class="lang-es">💡 Asesoría por Paulina</h3>
-            <h3 class="lang-en hidden">💡 Paulina's Advice</h3>
-            <p class="lang-es"><strong>Tours dentro de EE. UU.:</strong> Rutas VIP en NY, Florida y California.</p>
-            <p class="lang-en hidden"><strong>US Tours:</strong> VIP routes in NY, Florida, and California.</p>
+    <section class="max-w-7xl mx-auto px-4 py-16 mb-16">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div>
+                <h3 class="uppercase tracking-[0.2em] text-luxe-gold text-sm mb-4">El Servicio</h3>
+                <h2 class="font-serif text-4xl md:text-5xl text-luxe-black mb-8 leading-tight">Ahorra tiempo, <br>viaja mejor.</h2>
+                <p class="text-gray-600 font-light leading-relaxed mb-10">
+                    Nos encargamos de cada detalle. Desde boletos aéreos internacionales hasta promociones que no se publican en internet. Recibe atención inmediata por llamada o mensaje.
+                </p>
+                <div class="space-y-6">
+                    <div class="flex items-center">
+                        <span class="w-12 h-12 border border-luxe-gold rounded-full flex items-center justify-center text-luxe-gold mr-4">
+                            <i class="fa-solid fa-headset"></i>
+                        </span>
+                        <span class="font-serif text-xl">Atención Personalizada</span>
+                    </div>
+                    <div class="flex items-center">
+                        <span class="w-12 h-12 border border-luxe-gold rounded-full flex items-center justify-center text-luxe-gold mr-4">
+                            <i class="fa-solid fa-tags"></i>
+                        </span>
+                        <span class="font-serif text-xl">Tarifas Preferenciales</span>
+                    </div>
+                </div>
+            </div>
+            <div class="relative">
+                <img src="https://images.unsplash.com/photo-1542314831-c6a4d14241cc?auto=format&fit=crop&q=80&w=800" alt="Luxury Travel" class="w-full h-auto object-cover rounded-sm shadow-xl grayscale hover:grayscale-0 transition duration-1000">
+                <div class="absolute -bottom-8 -left-8 bg-white p-6 shadow-lg border-l-2 border-luxe-gold hidden md:block">
+                    <p class="font-serif text-2xl italic">"Yo busco por ti."</p>
+                </div>
+            </div>
         </div>
+    </section>
 
-    </div>
+    <!-- FOTOS ACTUALIZADAS Y FUNCIONALES -->
+    <section class="bg-luxe-black py-24 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h3 class="uppercase tracking-[0.2em] text-luxe-gold text-sm mb-4">Explora</h3>
+                <h2 class="font-serif text-4xl md:text-5xl text-white">Destinos Globales</h2>
+            </div>
 
-    <!-- Botón Flotante de WhatsApp -->
-    <a href="https://wa.me/18454806140?text=Hola%20Paulina,%20vengo%20de%20la%20página%20web%20y%20me%20gustaría%20información." target="_blank" class="whatsapp-float">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Icono de WhatsApp -->
-            <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-23.2-115-65.1-157zM223.9 414.7c-32.3 0-64-8.7-91.8-25.1l-6.6-3.9-68.2 17.9 18.3-66.5-4.3-6.8c-18-27.9-27.5-60.4-27.5-93.6 0-106.2 86.4-192.6 192.6-192.6 51.5 0 99.9 20.1 136.3 56.5 36.4 36.4 56.4 84.8 56.4 136.3 0 106.3-86.4 192.6-192.6 192.6zm105.6-144.1c-5.8-2.9-34.3-16.9-39.6-18.8-5.3-1.9-9.2-2.9-13.8 2.9-4.6 5.8-18.8 23.2-23.2 27.5-4.6 4.3-9.2 4.8-15 1.9-5.8-2.9-24.5-9-46.7-28.9-17.2-15.4-28.8-34.5-31.7-40.3-2.9-5.8-.3-9 2.6-11.9 2.6-2.6 5.8-6.8 8.7-10.2 2.9-3.4 3.9-5.8 5.8-9.7 1.9-3.9.9-7.3-.5-10.2-1.5-2.9-13.8-33.3-18.8-45.6-5-12.2-10-10.5-13.8-10.7-3.4-.2-7.3-.2-11.2-.2-3.9 0-10.2 1.5-15.5 7.3-5.3 5.8-20.3 19.8-20.3 48.3 0 28.5 20.8 56.1 23.7 59.9 2.9 3.9 40.8 62.3 98.9 87.5 13.9 6 24.7 9.6 33.1 12.3 13.9 4.4 26.6 3.8 36.7 2.3 11.3-1.7 34.3-14 39.1-27.5 4.9-13.5 4.9-25.1 3.4-27.5-1.5-2.5-5.3-3.9-11.1-6.8z"/>
-        </svg>
-        Hablar con Paulina
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="group relative overflow-hidden h-[400px] cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?auto=format&fit=crop&q=80&w=800" alt="Américas" class="w-full h-full object-cover opacity-70 group-hover:opacity-100 group-hover:scale-105 transition duration-1000">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-8">
+                        <h4 class="font-serif text-2xl text-white tracking-wide">Américas</h4>
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden h-[400px] cursor-pointer">
+                    <!-- Imagen corregida para Latinoamérica (Machu Picchu, muy estable) -->
+                    <img src="https://images.unsplash.com/photo-1518638150340-f706e86654de?auto=format&fit=crop&q=80&w=800" alt="Latinoamérica" class="w-full h-full object-cover opacity-70 group-hover:opacity-100 group-hover:scale-105 transition duration-1000">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-8">
+                        <h4 class="font-serif text-2xl text-white tracking-wide">Latinoamérica</h4>
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden h-[400px] cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?auto=format&fit=crop&q=80&w=800" alt="Europa" class="w-full h-full object-cover opacity-70 group-hover:opacity-100 group-hover:scale-105 transition duration-1000">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-8">
+                        <h4 class="font-serif text-2xl text-white tracking-wide">Europa</h4>
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden h-[400px] cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&q=80&w=800" alt="Oriente Medio" class="w-full h-full object-cover opacity-70 group-hover:opacity-100 group-hover:scale-105 transition duration-1000">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-8">
+                        <h4 class="font-serif text-2xl text-white tracking-wide">Oriente Medio</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 px-4 text-center bg-white border-b border-gray-100">
+        <h2 class="font-serif text-3xl md:text-5xl text-luxe-black mb-8">Comienza tu historia hoy.</h2>
+        <a href="tel:8454806140" class="inline-block text-4xl md:text-6xl font-light text-luxe-gold hover:text-luxe-black transition duration-500 tracking-wider">
+            845.480.6140
+        </a>
+    </section>
+
+    <footer class="bg-luxe-dark text-white pt-16 pb-8 px-4">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 mb-12 text-center md:text-left">
+            <div>
+                <h5 class="text-luxe-gold text-xs uppercase tracking-widest mb-4">Seguridad</h5>
+                <p class="text-gray-400 text-sm font-light">Confianza y respaldo</p>
+            </div>
+            <div>
+                <h5 class="text-luxe-gold text-xs uppercase tracking-widest mb-4">Experiencia</h5>
+                <p class="text-gray-400 text-sm font-light">Compromiso total</p>
+            </div>
+            <div>
+                <h5 class="text-luxe-gold text-xs uppercase tracking-widest mb-4">Tarifas</h5>
+                <p class="text-gray-400 text-sm font-light">Los mejores precios</p>
+            </div>
+            <div>
+                <h5 class="text-luxe-gold text-xs uppercase tracking-widest mb-4">Garantía</h5>
+                <p class="text-gray-400 text-sm font-light">Tu viaje, mi compromiso</p>
+            </div>
+        </div>
+        <div class="text-center border-t border-gray-800 pt-8 text-xs text-gray-500 uppercase tracking-widest">
+            &copy; <script>document.write(new Date().getFullYear())</script> Viaja Más Fácil. Diseño Exclusivo.
+        </div>
+    </footer>
+
+    <!-- BOTÓN FLOTANTE DE WHATSAPP -->
+    <a href="https://wa.me/18454806140?text=Hola,%20Paulina.%20Me%20gustaría%20solicitar%20una%20cotización%20de%20viaje." target="_blank" class="fixed bottom-6 right-6 bg-luxe-gold hover:bg-luxe-dark text-white w-14 h-14 rounded-full shadow-2xl transition duration-300 z-50 flex items-center justify-center text-3xl">
+        <i class="fa-brands fa-whatsapp"></i>
     </a>
 
+    <!-- SCRIPT DE FECHAS (Escuchador de eventos robusto) -->
     <script>
-        // Función para cambiar idioma
-        function toggleLanguage() {
-            const btn = document.getElementById('lang-btn');
-            const isEnglish = btn.innerText === "EN";
+        document.addEventListener('DOMContentLoaded', () => {
+            const selectores = ['adultos', 'ninos', 'bebes'];
             
-            document.querySelectorAll('.lang-es').forEach(el => el.classList.toggle('hidden', isEnglish));
-            document.querySelectorAll('.lang-en').forEach(el => el.classList.toggle('hidden', !isEnglish));
+            // Asignar el evento a cada selector
+            selectores.forEach(id => {
+                const elemento = document.getElementById(id);
+                if(elemento) {
+                    elemento.addEventListener('change', actualizarFechas);
+                }
+            });
+
+            // Generar las fechas para el estado inicial (1 adulto)
+            actualizarFechas();
+        });
+
+        function actualizarFechas() {
+            const numAdultos = parseInt(document.getElementById('adultos').value) || 1;
+            const numNinos = parseInt(document.getElementById('ninos').value) || 0;
+            const numBebes = parseInt(document.getElementById('bebes').value) || 0;
             
-            btn.innerText = isEnglish ? "ES" : "EN";
-        }
+            const contenedor = document.getElementById('contenedorFechas');
+            contenedor.innerHTML = ''; // Limpiamos cajones previos
 
-        // Función para mostrar/ocultar Tours
-        function toggleTours() {
-            const info = document.getElementById('tours-info');
-            info.classList.toggle('hidden');
-        }
-
-        // Función para generar campos de Fecha de Nacimiento
-        function updateDOBFields() {
-            const adults = parseInt(document.getElementById('adults').value) || 0;
-            const children = parseInt(document.getElementById('children').value) || 0;
-            const babies = parseInt(document.getElementById('babies').value) || 0;
-            
-            const total = adults + children + babies;
-            const container = document.getElementById('dob-container');
-            
-            // Detectar idioma actual para las etiquetas
-            const isEnglish = document.getElementById('lang-btn').innerText === "ES"; 
-            const labelText = isEnglish ? "Passenger" : "Pasajero";
-
-            container.innerHTML = ''; // Limpiar contenedor
-            
-            if(total > 0) {
-                container.innerHTML = `<h3 style="font-size:14px; margin-bottom:10px; color:var(--primary);">Fechas de Nacimiento</h3>`;
-            }
-
-            for(let i = 1; i <= total; i++) {
-                container.innerHTML += `
-                    <div class="dob-field">
-                        <label>${labelText} ${i}</label>
-                        <input type="date" name="Fecha_Nacimiento_Pasajero_${i}" required>
-                    </div>
-                `;
-            }
-        }
-
-        // Ejecutar al iniciar para cargar el campo del Adulto 1
-        window.onload = updateDOBFields;
-    </script>
-
-</body>
-</html>
-
-
-```
+            // Función para inyectar HTML de forma limpia
+            const generarCampos = (tipoLabel, tipoName, cantidad) => {
+                for (let i = 1; i <= cantidad; i++) {
+                    contenedor.innerHTML += `
+                        <div class="fade-in bg-white p-4 border border-gray-100 shadow-sm rounded-sm">
+                            <label class="block text-[10px] uppercase tra
